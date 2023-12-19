@@ -1,0 +1,3 @@
+# Archivos y directorios específicos de Python
+venv/
+__pycache__/
