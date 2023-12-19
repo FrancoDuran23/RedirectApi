@@ -33,19 +33,7 @@ class RedirectSerializer(serializers.ModelSerializer):
         """
         validated_data['key'] = self.generate_unique_key()
         return Redirect.objects.create(**validated_data)
-
-    def update(self,  redirect_instance, validated_data):
-        """
-        Modifica y guarda una instancia de Redirect
-        :param instance: Intancia que se modificara
-        :param validated_data: diccionario de datos donde se envia los atributos que conformaran la instancia
-        :return: una instancia de Redirect modificada
-        """
-        redirect_instance.url = validated_data.get('url',  redirect_instance.url)
-        redirect_instance.active = validated_data.get('active',  redirect_instance.active)
-        redirect_instance.save()
-        return  redirect_instance
-
+    
 class GetUrlSerializer(serializers.Serializer):
     '''
     Serializador para la vista de GetUrl
