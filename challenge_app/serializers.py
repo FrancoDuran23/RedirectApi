@@ -12,7 +12,7 @@ class RedirectSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Redirect
-        fields = '__all__'
+        fields = ['key', 'url', 'active', 'created_at', 'updated_at']
         read_only_fields = ['key', 'created_at', 'updated_at']
 
     def generate_unique_key(self):
