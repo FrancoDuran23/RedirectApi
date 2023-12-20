@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'django_project_tmob.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'challenge_db',
-        'USER': 'franco',
-        'PASSWORD': 'clavedeadmin',
+        'NAME': 'challenge_db', # Modificar segun nombre de bd
+        'USER': 'franco', # Modificar segun usuario
+        'PASSWORD': 'clavedeadmin', # Modificar segun password
         'HOST': 'localhost',
         'PORT': '3306',
     }
